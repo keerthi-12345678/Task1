@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PressStream - Classic Edition</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font: Roboto Slab (Editorial/Journalism Look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Slab', serif; /* Editorial Font */
+            background-color: #ffffff; /* Light background: White */
+            color: #1f2937; /* Default dark text color: Gray-800 */
+        }
+        /* Classic Press Theme: Deep Crimson Accent */
+        .text-primary { color: #b91c1c; } /* Deep Crimson/Red */
+        .bg-primary { background-color: #b91c1c; } /* Base Crimson for buttons */
+        .hover-primary:hover { background-color: #991b1b; } /* Darker Crimson hover state */
+        .card-bg { background-color: #ffffff; } /* Card background: White */
+        .course-card-shadow { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); } /* Softer shadow for light mode */
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold text-primary">
+                    PressStream
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#articles" class="text-gray-600 hover:text-primary transition duration-150">Sections</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition duration-150">World News</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition duration-150">Opinion</a>
+                </nav>
+
+                <!-- Auth Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-primary font-medium transition duration-150">Sign In</button>
+                    <button class="bg-primary hover-primary text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-150">
+                        Subscribe Now
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-500 hover:text-primary hover:bg-gray-100 focus:outline-none transition duration-150">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#articles" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Sections</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">World News</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Opinion</a>
+                <button class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Sign In</button>
+                <button class="w-full text-left bg-primary hover-primary text-white font-semibold py-2 px-3 rounded-lg mt-2">
+                    Subscribe Now
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-gray-50 py-16 sm:py-24 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+                
+                <!-- Text Content -->
+                <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0 text-center lg:text-left">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+                        Stay Informed. Instantly. With <span class="text-primary">Award-Winning Journalism</span>
+                    </h1>
+                    <p class="mt-4 text-xl text-gray-600">
+                        Access breaking news, in-depth reports, and expert analysis from around the globe.
+                    </p>
+                    <div class="mt-8 flex justify-center lg:justify-start space-x-4">
+                        <button class="bg-primary hover-primary text-white font-bold py-3 px-8 rounded-xl shadow-xl transition duration-300 transform hover:scale-105">
+                            Read Latest News
+                        </button>
+                        <button class="bg-white border-2 border-gray-400 text-gray-800 font-bold py-3 px-8 rounded-xl shadow-md transition duration-300 hover:bg-gray-100">
+                            View Top Sections
+                        </button>
+                    </div>
+                </div>
+
+                <!--
